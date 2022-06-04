@@ -1,0 +1,12 @@
+version: '3.4'
+services:
+    poc:
+        container_name: poc-js
+        entrypoint: ./.docker/entrypoint.sh
+        build:
+        context: .
+        dockerfile: Dockerfile.dev
+        ports:
+        - "9091:9091"
+        volumes:
+        - ".:/home/node/poc"
